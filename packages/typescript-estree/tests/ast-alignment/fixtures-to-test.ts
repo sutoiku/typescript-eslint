@@ -392,6 +392,12 @@ tester.addFixturePatternConfig('typescript/basics', {
      * https://github.com/babel/babel/pull/12758
      */
     'union-intersection',
+    /**
+     * [BABEL ERRORED, BUT TS-ESTREE DID NOT]
+     * Private elements cannot have an accessibility modifier ('private')
+     * TODO: Add error code from typescript
+     */
+    'class-private-field-modifiers-error',
   ],
   ignoreSourceType: [
     /**
