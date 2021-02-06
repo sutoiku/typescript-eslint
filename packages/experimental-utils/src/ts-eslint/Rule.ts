@@ -333,7 +333,6 @@ interface RuleListener {
   >;
   TSAnyKeyword?: RuleFunction<TSESTree.TSAnyKeyword>;
   TSArrayType?: RuleFunction<TSESTree.TSArrayType>;
-  TSAsExpression?: RuleFunction<TSESTree.TSAsExpression>;
   TSAsyncKeyword?: RuleFunction<TSESTree.TSAsyncKeyword>;
   TSBigIntKeyword?: RuleFunction<TSESTree.TSBigIntKeyword>;
   TSBooleanKeyword?: RuleFunction<TSESTree.TSBooleanKeyword>;
