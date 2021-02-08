@@ -3,6 +3,7 @@ import glob from 'glob';
 import * as parser from '../../src';
 import { extname } from 'path';
 import { formatSnapshotName, isJSXFileType } from '../../tools/test-utils';
+import { serializer } from '../../tools/tserror-serializer';
 
 /**
  * Process all fixtures, we will only snapshot the ones that have semantic errors
@@ -11,6 +12,8 @@ import { formatSnapshotName, isJSXFileType } from '../../tools/test-utils';
 const FIXTURES_DIR =
   '../../node_modules/@typescript-eslint/shared-fixtures/fixtures';
 const testFiles = glob.sync(`${FIXTURES_DIR}/**/*.src.*`);
+
+expect.addSnapshotSerializer(serializer);
 
 describe('Parse all fixtures with "errorOnTypeScriptSyntacticAndSemanticIssues" enabled', () => {
   testFiles.forEach(filename => {
